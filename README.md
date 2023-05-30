@@ -1,5 +1,5 @@
 # pyShearLab
-pyShearLab is a Python toolbox which is based on [ShearLab3D](http://www3.math.tu-berlin.de/numerik/www.shearlab.org/software) written by [Rafael Reisenhofer](http://www.math.uni-bremen.de/~reisenho/) and has been ported to Python by Stefan Loock.
+pyShearLab is a Python toolbox which is based on [ShearLab3D](http://www3.math.tu-berlin.de/numerik/www.shearlab.org/software) written by [Rafael Reisenhofer](http://www.math.uni-bremen.de/~reisenho/) and has been ported to Python by Stefan Loock. This fork contains updates by Lander Ver Hoef to bring pyShearLab up to date with python in 2023.
 
 Currently, pyShearLab only offers a two-dimensional subset of ShearLab3D which contains both 2D and 3D transforms.
 
@@ -17,7 +17,7 @@ pyShearLab2D has been developed and tested with Python 3.6 using the Anaconda pa
 You can simply download, unzip and use pyShearLab. Depending on your specific Python development environment, you may want to add the pyShearLab2D folder to your Python environment (Python Path). The dependencies can be installed using pip. If you use Anaconda, they are already installed.
 A pip package is currently _not_ available, but the package can be installed straight from github via:
 
-    pip install https://github.com/stefanloock/pyshearlab/archive/master.zip
+    pip install https://github.com/zyjux/pyshearlab/archive/master.zip
 
 ## Usage
 In order to use pyShearLab you need to import it as a module, see pySLExampleDenoising.py as an example. The denoising example 
