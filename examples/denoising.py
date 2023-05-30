@@ -12,8 +12,8 @@ def toc():
         print("Toc: start time not set")
 
 import numpy as np
-from scipy import ndimage as img
 from scipy import io as sio
+import imageio.v2 as img
 import matplotlib.pyplot as plt
 import pyshearlab
 
@@ -37,8 +37,8 @@ tic()
 print("generating shearlet system...")
 ## create shearlets
 shearletSystem = pyshearlab.SLgetShearletSystem2D(0,X.shape[0], X.shape[1], scales)
-
 toc()
+
 tic()
 print("decomposition, thresholding and reconstruction...")
 
@@ -51,7 +51,7 @@ weights = np.ones(coeffs.shape)
 
 for j in range(len(shearletSystem["RMS"])):
     weights[:,:,j] = shearletSystem["RMS"][j]*np.ones((X.shape[0], X.shape[1]))
-    
+
 coeffs = np.real(coeffs)
 zero_indices = np.abs(coeffs) / (thresholdingFactor * weights * sigma) < 1
 coeffs[zero_indices] = 0
